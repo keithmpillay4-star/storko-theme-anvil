@@ -1,0 +1,28 @@
+<section class="ui-wrap ui-section">
+  {%- if section.settings.title != blank -%}<h2 class="ui-section__title">{{ section.settings.title }}</h2>{%- endif -%}
+  <ul class="anvil-certs" role="list">
+    {%- for block in section.blocks -%}
+      <li class="anvil-cert" {{ block.shopify_attributes }}>
+        {%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 240 | image_tag: loading: 'lazy', height: 56, alt: '' }}{%- else -%}{% render 'ui-icon', name: 'shield' %}{%- endif -%}
+        <span><strong>{{ block.settings.name }}</strong>{% if block.settings.detail != blank %}<br><small>{{ block.settings.detail }}</small>{% endif %}</span>
+        {%- if block.settings.file != blank -%}<a class="ui-link" href="{{ block.settings.file }}">{% render 'ui-icon', name: 'download' %}<span class="visually-hidden">Download</span></a>{%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "Certifications",
+  "settings": [{"type": "text", "id": "title", "label": "Heading", "default": "Certified quality"}],
+  "blocks": [
+    {"type": "cert", "name": "Certification", "settings": [
+      {"type": "image_picker", "id": "image", "label": "Badge"},
+      {"type": "text", "id": "name", "label": "Name", "default": "ISO 9001:2015"},
+      {"type": "text", "id": "detail", "label": "Detail", "default": "Quality management"},
+      {"type": "url", "id": "file", "label": "Certificate link (PDF)"}
+    ]}
+  ],
+  "presets": [{"name": "Certifications", "blocks": [{"type": "cert"}, {"type": "cert"}, {"type": "cert"}]}]
+}
+{% endschema %}

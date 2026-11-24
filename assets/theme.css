@@ -1,0 +1,34 @@
+/* Anvil: industrial, spec-led, square edges, condensed uppercase headings */
+@layer theme {
+  h1, h2, h3, .ui-logo { text-transform: uppercase; letter-spacing: .02em; }
+  .ui-announce { background: var(--c-fg); color: var(--c-bg); text-align: left; }
+  .ui-announce__inner { display: flex; gap: 24px; }
+  .ui-header { border-bottom: 3px solid var(--c-fg); }
+  .ui-nav__link { text-transform: uppercase; letter-spacing: .06em; font-size: .88rem; font-weight: 600; }
+  .ui-btn { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
+  .ui-card__media { background: #fff; border: 1px solid color-mix(in srgb, var(--c-fg) 14%, transparent); aspect-ratio: 4 / 5; }
+  .ui-card__img { object-fit: cover; }
+  .ui-card__title { font-weight: 600; }
+  .ui-section__title { border-left: 6px solid var(--c-accent); padding-left: 14px; }
+  .anvil-stats { background: var(--c-fg); color: var(--c-bg); }
+  .anvil-stats__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; list-style: none; padding-block: 36px; }
+  @media (min-width: 750px) { .anvil-stats__list { grid-template-columns: repeat(4, 1fr); } }
+  .anvil-stats__list strong { display: block; font-family: var(--f-heading); font-size: 2.4rem; color: var(--c-accent); line-height: 1; }
+  .anvil-stats__list span { font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; }
+  .anvil-certs { display: grid; gap: 16px; list-style: none; grid-template-columns: 1fr; }
+  @media (min-width: 750px) { .anvil-certs { grid-template-columns: repeat(3, 1fr); } }
+  .anvil-cert { display: flex; align-items: center; gap: 14px; padding: 18px; background: #fff; border: 1px solid color-mix(in srgb, var(--c-fg) 14%, transparent); }
+  .anvil-cert .ui-icon { width: 36px; height: 36px; color: var(--c-accent); flex: none; }
+  .anvil-cert .ui-link { margin-left: auto; }
+  .anvil-quote { display: grid; gap: 32px; }
+  @media (min-width: 990px) { .anvil-quote { grid-template-columns: 1fr 1.2fr; gap: 64px; } }
+  .anvil-quote__form { padding: 28px; background: #fff; border-top: 4px solid var(--c-accent); }
+  .anvil-specs caption { text-align: left; font-family: var(--f-heading); text-transform: uppercase; font-size: 1.1rem; padding-bottom: 8px; }
+  .anvil-specs th { width: 40%; font-weight: 600; background: var(--c-surface); }
+  .anvil-bulk { display: grid; gap: 12px; }
+  .anvil-bulk__title { font-size: 1.1rem; }
+  .anvil-bulk input[type="number"] { width: 90px; }
+  .anvil-downloads { list-style: none; display: grid; gap: 8px; }
+  .anvil-downloads a { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+  .ui-product__info .ui-select { max-width: 320px; }
+}

@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {"type": "vendor"},
+        "title": {"type": "title"},
+        "price": {"type": "price"},
+        "variants": {"type": "variant_picker", "settings": {"picker_type": "dropdown"}},
+        "qty": {"type": "quantity"},
+        "buy": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": false}},
+        "quote": {"type": "quote_button"},
+        "specs": {"type": "specs"},
+        "bulk": {"type": "bulk_order"},
+        "downloads": {"type": "downloads"},
+        "desc": {"type": "description"}
+      },
+      "block_order": ["vendor", "title", "price", "variants", "qty", "buy", "quote", "specs", "bulk", "downloads", "desc"]
+    },
+    "recs": {"type": "product-recommendations", "settings": {"heading": "Related components"}}
+  },
+  "order": ["main", "recs"]
+}

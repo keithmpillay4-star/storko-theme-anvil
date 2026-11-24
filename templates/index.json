@@ -1,0 +1,49 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "blocks": {
+        "eyebrow": {"type": "eyebrow", "settings": {"text": "Precision manufacturing"}},
+        "heading": {"type": "heading", "settings": {"heading": "Built to spec. Delivered on time."}},
+        "text": {"type": "text", "settings": {"text": "Custom fabrication and stocked components for trade customers."}},
+        "buttons": {"type": "buttons", "settings": {"label_1": "Browse catalogue", "label_2": "Request a quote"}}
+      },
+      "block_order": ["eyebrow", "heading", "text", "buttons"],
+      "settings": {"height": "medium", "overlay": 55}
+    },
+    "stats": {
+      "type": "stats",
+      "blocks": {
+        "s1": {"type": "stat", "settings": {"value": "25+", "label": "Years in manufacturing"}},
+        "s2": {"type": "stat", "settings": {"value": "1,200", "label": "Parts shipped weekly"}},
+        "s3": {"type": "stat", "settings": {"value": "99.4%", "label": "On-time delivery"}},
+        "s4": {"type": "stat", "settings": {"value": "ISO 9001", "label": "Certified quality"}}
+      },
+      "block_order": ["s1", "s2", "s3", "s4"]
+    },
+    "categories": {
+      "type": "collection-list",
+      "blocks": {"c1": {"type": "collection"}, "c2": {"type": "collection"}, "c3": {"type": "collection"}},
+      "block_order": ["c1", "c2", "c3"],
+      "settings": {"title": "Product families", "columns": 3}
+    },
+    "capabilities": {
+      "type": "multicolumn",
+      "blocks": {
+        "k1": {"type": "column", "settings": {"icon": "check", "heading": "CNC machining", "text": "<p>Tight tolerances across steel, aluminium and plastics.</p>"}},
+        "k2": {"type": "column", "settings": {"icon": "shield", "heading": "Quality assured", "text": "<p>Full inspection reports and material certificates.</p>"}},
+        "k3": {"type": "column", "settings": {"icon": "truck", "heading": "Trade logistics", "text": "<p>Scheduled deliveries and call-off orders.</p>"}}
+      },
+      "block_order": ["k1", "k2", "k3"],
+      "settings": {"title": "Capabilities"}
+    },
+    "certs": {
+      "type": "certifications",
+      "blocks": {"a": {"type": "cert"}, "b": {"type": "cert"}, "c": {"type": "cert"}},
+      "block_order": ["a", "b", "c"]
+    },
+    "featured": {"type": "featured-collection", "settings": {"title": "Popular components", "limit": 4}},
+    "quote": {"type": "quote-form"}
+  },
+  "order": ["hero", "stats", "categories", "capabilities", "certs", "featured", "quote"]
+}
